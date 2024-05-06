@@ -187,11 +187,16 @@
 }
 
 #overview {
+
   div {
     .text-content {
       ul {
         li {
           margin: 18px;
+        }
+        li::marker{
+          color: var(--primary);
+          font-size: 23px;
         }
       }
     }

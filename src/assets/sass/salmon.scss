@@ -2,47 +2,198 @@
 <---      salmon-hero           -->
 <--- -------------------------- -*/
 #salmon-hero .Section_top .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#salmon-overview{
+#salmon-overview {
+  .image-group {
+    width: calc(730 / 16 * 1em);
+    height: calc(561 / 16 * 1em);
 
-    .image-group {
-        width: calc(730 / 16 * 1em);
-        height: calc(561 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(730 / 16 * 1em);
-            height: calc(561 / 16 * 1em);
-        }
+    .cs-picture1 {
+      width: calc(730 / 16 * 1em);
+      height: calc(561 / 16 * 1em);
     }
+  }
 }
 
+#salmon-location {
+  .image-group {
+    width: calc(598 / 16 * 1em);
+    height: calc(536 / 16 * 1em);
 
-#salmon-location{
-
-    .image-group {
-        width: calc(598 / 16 * 1em);
-        height: calc(536 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(598 / 16 * 1em);
-            height: calc(536 / 16 * 1em);
-        }
+    .cs-picture1 {
+      width: calc(598 / 16 * 1em);
+      height: calc(536 / 16 * 1em);
     }
+  }
 }
 
-#salmon-bring{
+#salmon-bring {
+  .image-group {
+    width: calc(747 / 16 * 1em);
+    height: calc(690 / 16 * 1em);
 
-    .image-group {
-        width: calc(747 / 16 * 1em);
-        height: calc(690 / 16 * 1em);
+    .cs-picture1 {
+      width: calc(747 / 16 * 1em);
+      height: calc(690 / 16 * 1em);
+    }
+  }
+}
+#overview {
+  .cs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 
-        .cs-picture1 {
-            width: calc(747 / 16 * 1em);
-            height: calc(690 / 16 * 1em);
+  .text-content {
+    max-width: 700px;
+  }
+
+  .image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+    font-size: min(2vw, 0.8em);
+    width: calc(779 / 16 * 1em);
+    height: calc(542 / 16 * 1em);
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    .cs-picture {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+    .cs-picture1 {
+      width: calc(779 / 16 * 1em);
+      height: calc(542 / 16 * 1em);
+      top: 0;
+      left: 0;
+    }
+  }
+}
+#services {
+  height: 364px;
+  margin: auto;
+  padding: var(--sectionPadding);
+  .cs-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary);
+    border-radius: 27px;
+    color: white;
+    display: flex;
+    padding: 56px;
+    flex-direction: row;
+    align-items: center;
+    div:nth-child(1) {
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    h2,
+    p {
+      color: white;
+      margin: 0px;
+      text-align: left;
+    }
+  }
+  img {
+    top: -40px;
+    border-radius: 50%;
+    position: absolute;
+    right: -44px;
+    height: 392px;
+    width: 420px;
+    bottom: 10px;
+  }
+}
+#pricing {
+    h3{
+        text-align: center;
+    }
+    .cs-container{
+        width: 1035px;
+        height: 315px;
+        background-color: var(--bodyTextColorWhite);
+        border-radius: 27px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    .pricing-card{
+        border-radius: inherit;
+        background-color: white;
+        height: 200px;
+        width: 290px;
+        padding:25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h5{
+            color:#145FA4 ;
+            font-weight: bold;
+        }
+        .budget{
+            display: flex;
+            flex-direction: row ;
+            align-items: center;
+            .price{
+              margin-bottom: 0px;
+            }
+            .price:nth-child(2){
+              color: var(--secondary);
+            }
         }
     }
+    .pricing-card:hover{
+      cursor: pointer;
+      background-color: var(--secondary);
+      color: white;
+      h5,span,p{
+        color: white;
+      }
+    }
+}
+}
+@media only screen and (min-width: 1024px) {
+  #overview {
+    .cs-container {
+      flex-direction: row;
+    }
+
+    .image-group {
+      /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+      font-size: min(0.8vw, 0.8em);
+    }
+
+    .text-content {
+      max-width: 500px;
+    }
+  }
+}
+
+#overview {
+  div {
+    .text-content {
+      ul {
+        li {
+          margin: 18px;
+        }
+      }
+    }
+  }
 }
